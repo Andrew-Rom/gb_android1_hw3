@@ -101,4 +101,11 @@ public class Employee {
         Date secondDate = new Date(secondDateYear, secondDateMonth - 1, secondDateDay);
         return (int) ((firstDate.getTime() - secondDate.getTime()) / (24 * 60 * 60 * 1000)); //(24ч*60мин*60сек*1000мс)
     }
+
+    public int compare(Employee e1, Employee e2) {
+        Date e1Date = new Date(e1.birthYear, e1.birthMonth - 1, e1.birthDay);
+        Date e2Date = new Date(e2.birthYear, e2.birthMonth - 1, e2.birthDay);
+        return (int) ((e1Date.getTime() - e2Date.getTime()) / (24 * 60 * 60 * 1000)); //(24ч*60мин*60сек*1000мс)
+    }
+
 }
